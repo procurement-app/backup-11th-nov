@@ -1,0 +1,435 @@
+
+
+
+
+.press-btn{
+  position: fixed;
+  left: 90%;
+  top: 20%;
+}
+
+.apexcharts-datalabels-group {
+  display: none;
+}
+
+.apexcharts-datalabels {
+  display: none;
+}
+
+
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.mat {
+  
+  position: absolute;
+  top: 14%;
+  left: 10%;
+}
+
+
+
+.mat-btn{
+  background-color: #363062;color: #fff;
+}
+
+
+
+.header-profile {
+  position: absolute;
+  left: 85%;
+}
+
+.card-action {
+  position: absolute;
+  left: 70%;
+  top: 14%;
+}
+
+
+/*
+.mat-form-field {
+  transform: translateX(100%);
+  width: 30%;
+  height: 5%;
+
+}
+*/
+/*
+.mat-label {
+  font-size: 1vw;
+}
+*/
+
+/*
+.nav-tabs {
+  position: absolute;
+  left: 10%;
+}
+*/
+
+
+
+.dropdown-item {
+  font-family: 'lato';
+}
+
+.btn {
+  font-family: 'lato';
+}
+
+/*
+.hid {
+ transform: translate(280%,-60%);
+
+
+}
+*/
+
+
+.ndiv:hover+ .hid {
+  display: block;
+  transform: translateX(-90%);
+  
+
+
+}
+
+
+/*
+.ndiv{
+  position: fixed;
+  top: 20%;
+  left: 97%;
+}
+*/
+
+
+
+
+
+
+
+
+#drop {
+  transform: translate(140px, 100px) !important;
+}
+
+
+.modal-header {
+  font-family: 'lato';
+
+}
+
+.modal-body {
+  font-family: 'hind madurai';
+}
+
+.mat-tab-label-content {
+  font-family: 'lato';
+}
+
+
+.table-striped tr {
+  font-family: 'hind madurai';
+}
+
+.table-striped tr td {
+  font-family: 'martel';
+}
+
+
+
+
+.mb-1 {
+  font-family: 'lato';
+}
+
+
+
+
+
+
+
+
+/*
+  .container{
+      display: grid;
+      grid-template-columns: 1fr ;
+  }
+  */
+
+@keyframes move {
+  from {
+    position: absolute;
+    top: 0%;
+  }
+
+  to {
+    position: absolute;
+    top: 10%;
+  }
+}
+
+@keyframes moves {
+  from {
+    position: absolute;
+    top: 0%;
+  }
+
+  to {
+    position: absolute;
+    top: 4%;
+  }
+}
+
+.kend {
+  transform: translateY(-80px);
+}
+
+
+
+
+
+
+.cnt {
+  position: absolute;
+  top: -40px;
+
+}
+
+
+
+.modell {
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+
+
+.k-chart-surface {
+  height: 30vh !important;
+}
+
+
+
+
+.mat-tab-label .mat-tab-label-content {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 0px !important;
+  margin: 0px !important;
+
+}
+
+.mat-form-field-infix {
+  width: 10vw !important;
+  height: 4vh !important;
+}
+
+
+/*MEDIA QUERY STARTED*/
+
+
+@media only screen and (max-width: 1000px) {
+  .modal-xl {
+    max-width: 100% !important;
+  }
+
+  
+
+  .mat{
+    position: absolute;
+    left: 0%;
+  }
+
+  .card-action{
+    position: absolute;
+    left: 70%;
+  }
+
+
+.hid{
+
+}
+
+  
+
+
+
+}
+
+@media only screen and (max-width: 1200px) {
+  /*
+  .k-chart-surface {
+    width: 45%!important;
+    height: 40vh !important;
+  }
+  */
+
+  .mat{
+    position: absolute;
+    top: 8%;
+  }
+
+  .card-action{
+    position: absolute;
+    top: 8%;
+  }
+
+  .index-chart-apex{
+    position: relative;
+    left: 25%;
+    top: -120px;
+  }
+/*
+  .hid{
+    transform: translate(-15%,-50%);
+  }
+  */
+
+
+/*
+  .dropdown-menu-right{
+    min-width: 150px !important;
+    top: 50% !important;
+    position: absolute;
+    left: 70%;
+  }
+  */
+  
+
+ 
+}
+
+
+
+@media only screen and (max-width: 568px) {
+  /*
+  .mat-form-field {
+    width: 20% !important;
+    height: 5% !important;
+  }
+  */
+/*
+  .mat-label {
+    font-size: 1vw;
+  }
+
+  .nav-item {
+    width: 30%;
+    height: 5%;
+  }
+
+  .nav-link {
+    font-size: 1vw;
+  }
+  */
+  /*
+  .hid{
+    transform: translate(-15%,-140%);
+  }
+  */
+ 
+
+ 
+
+  .index-chart-apex{
+    position: relative;
+    left: 25%;
+    top: -60px;
+  }
+/*
+  .k-chart-surface {
+    width:  15vw !important;
+    height: 85vh !important;
+    
+  }
+  */
+  
+
+  .hid{
+    
+  }
+/*
+  .dropdown-menu-right{
+    min-width: 150px !important;
+    top: 50% !important;
+    position: absolute;
+    left: 70%;
+    
+  }
+  */
+
+
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  /*
+  .mat-form-field {
+    width: 30% !important;
+    height: 5% !important;
+  }
+  */
+/*
+  .mat-label {
+    font-size: 1vw;
+  }
+  
+
+  .nav-item {
+    width: 30%;
+    height: 5%;
+  }
+
+  .nav-link {
+    font-size: 2vw;
+  }
+*/
+  .ndiv:hover+ .hid {
+    display: block;
+   
+  
+  
+  }
+/*
+  .hid{
+    transform: translate(-15%,-190%);
+  }
+  */
+ 
+
+  
+/*
+  .dropdown-menu-right{
+    min-width: 150px !important;
+    top: 50% !important;
+    position: absolute;
+    left: 70%;
+    position: absolute;
+    left: 50%;
+  }
+  */
+ 
+
+ 
+
+
+}
+
+@media only screen and (max-width: 730px){
+  .mat{
+    position: absolute;
+    left: 0px;
+  }
+
+ 
+} 
+
+/*MEDIA-QUERY END*/

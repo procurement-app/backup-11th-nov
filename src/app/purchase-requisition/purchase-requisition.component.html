@@ -1,0 +1,389 @@
+<div class="content-body">
+   
+    <div class="d-flex  justify-content-start  " style="transform: translateY();">
+     
+        <div class="input-group search-area " style="margin-right: 5%;background-color: #fff;"   >
+            <div class="input-group-append">
+                <button class="input-group-text"><i class="flaticon-381-search-2"></i></button>
+            </div>
+            <input type="text" class="form-control" placeholder="Global Filter...">
+        </div>
+      
+      
+    
+    
+  
+        
+     
+        <div class=" ">  <a href="/admin/req"><button type="button" class="btn btn-primary"   >ADD</button></a> 
+        </div>
+    </div>
+
+    
+    <div class="d-flex  flex-column flex-xl-row  justify-content-around   " >
+        <div class="p-2 " >
+            <div class="card">
+                <div class="table-responsive">
+                    <table class="table table-striped  table-hover " style="color:black" >
+                        <thead  style="white-space: nowrap;"  >
+                            <tr>
+                                <th scope="col">No</th>
+                                <th scope="col">Query Email</th>
+                                <th scope="col">Response Email</th>
+                                <th scope="col">StartDate</th>
+                                <th scope="col">EndDate</th>
+                                <th scope="col">Title</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Status</th>
+                             
+                            </tr>
+                            <tr >
+                                <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="No" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="QueryEmail" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="ResponseEmai" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="StartDate" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="EndDate" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="Title" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="Description" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  <th scope="col"> 
+                                    <div class="d-flex flex-row justify-content-around align-items-center "  >
+                                        <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
+                                    
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="Status" style="height: 50%;"  />
+                                    </div>
+           
+                                   
+                                  </th>
+                                  
+
+                                 
+                 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let country of countries$ | async; index as i" (click)=hoverFn() style="cursor: pointer;">
+
+                                <th scope="row">{{ i + 1 }}</th>
+                                <td>
+
+
+                                    <ngb-highlight [result]="country.email" [term]="filter.value"></ngb-highlight>
+                                </td>
+                                <td>
+
+
+                                    <ngb-highlight [result]="country.mail" [term]="filter.value"></ngb-highlight>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="country.start " [term]="filter.value">
+                                    </ngb-highlight>
+                                </td>
+                                <td>
+                                    <ngb-highlight [result]="country.end " [term]="filter.value">
+                                    </ngb-highlight>
+                                </td>
+                                <td>
+
+
+                                    <ngb-highlight [result]="country.title" [term]="filter.value"></ngb-highlight>
+                                </td>
+                                <td>
+
+
+                                    <ngb-highlight [result]="country.desc" [term]="filter.value"></ngb-highlight>
+                                </td>
+                                <td>
+
+
+                                    <ngb-highlight [result]="country.status" [term]="filter.value"></ngb-highlight>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+        <div class="p-2 ">
+         <!--
+        <div class="invoice-box" id="invoice">
+            <div class="d-flex flex-row justify-content-end align-items-center">
+                <div class="p-2">
+                    
+                </div>
+                <div class="p-2"><i class="fa fa-print"></i> </div>
+                <div class="p-2" [routerLink]="['/admin/edit-req']"><i class="fa fa-edit"></i> </div>
+                <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm"
+                        (click)="closeFn()">Close</button> </div>
+            </div>
+
+			<table cellpadding="0" cellspacing="0">
+				<tr class="top">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td class="title">
+									<h3>Requisition Details</h3>
+								</td>
+
+								<td>
+									No: 1<br />
+									StartDate: 17-04-2020<br />
+									EndDate: 18-05-2020 <br/>
+                                
+								</td>
+                                
+							</tr>
+						</table>
+					</td>
+				</tr>
+
+				<tr class="information">
+					<td colspan="2">
+						<table>
+							<tr>
+								<td>
+									QueryEmail:<br />
+									russia@gmail.com<br />
+									Title:Purchase
+								</td>
+
+								<td>
+									ResponseEmail:<br />
+									india@gmail.com<br />
+									Status:on
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+            -
+
+				<tr class="heading">
+					<td>Quantity</td>
+
+					<td></td>
+				</tr>
+
+				<tr class="details">
+					<td>3</td>
+
+					<td></td>
+				</tr>
+
+				<tr class="heading">
+					<td>Cost</td>
+
+					<td></td>
+				</tr>
+
+				<tr class="item">
+					
+
+					<td>$300.00</td>
+				</tr>
+
+				<tr class="item">
+					
+
+					<td>$75.00</td>
+				</tr>
+
+				<tr class="item last">
+					
+
+					<td>$10.00</td>
+				</tr>
+
+				<tr class="total">
+					<td></td>
+
+					<td>Total: $385.00</td>
+				</tr>
+			</table>
+		</div>
+    -->
+    <div class="invoice card" id="invoce" >
+        <div class="d-flex flex-row justify-content-end  " style="transform: translateY();">
+            <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm" (click)="closeFn()">Close</button> </div>
+
+        </div>
+       
+        <!-- begin invoice-company -->
+        <div class="invoice-company text-inverse f-w-600">
+           <span class="pull-right hidden-print">
+           <a href="/admin/edit-req" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-edit t-plus-1 text-danger fa-fw fa-lg"  ></i> Edit</a>
+           <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
+           </span>
+           Requisition Details
+
+        </div>
+        <!-- end invoice-company -->
+        <!-- begin invoice-header -->
+        <div class="invoice-header">
+           <div class="invoice-from">
+              
+              <address class="m-t-5 m-b-5">
+                 <strong class="text-inverse">NO:1</strong><br>
+                 <strong class="text-inverse">Startdate: <br> 17-04-2020</strong><br>
+                 <strong class="text-inverse">Enddate: <br> 18-05-2020</strong><br>
+                 <strong class="text-inverse">QueryEmail: <br>  Russia@gmail.com</strong><br>
+                
+              </address>
+           </div>
+           <div class="invoice-from">
+              
+            <address class="m-t-5 m-b-5">
+                <strong class="text-inverse">Status :  on</strong><br>
+               <strong class="text-inverse">Title: <br> Purchase</strong><br>
+               <strong class="text-inverse">Description: <br >new purchase</strong><br>
+            
+               <strong class="text-inverse">ResponseEmai: <br> india@gmail.com</strong><br>
+             
+            </address>
+         </div>
+        
+           
+        </div>
+        <!-- end invoice-header -->
+        <!-- begin invoice-content -->
+        <div class="invoice-content">
+           <!-- begin table-responsive -->
+           <div class="table-responsive">
+              <table class="table table-invoice">
+                 <thead>
+                    <tr>
+                       <th> NO</th>
+                       <th class="text-center" width="10%">NAME</th>
+                       <th class="text-center" width="10%">QTY</th>
+                       <th class="text-right" width="20%">COST</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                    <tr>
+                       <td>
+                          <span class="text-inverse">1</span><br>
+                     
+                       </td>
+                       <td class="text-center">item1</td>
+                       <td class="text-center">50</td>
+                       <td class="text-right">$2,500.00</td>
+                    </tr>
+                    <tr>
+                       <td>
+                          <span class="text-inverse">2</span><br>
+
+                       </td>
+                       <td class="text-center">item2</td>
+                       <td class="text-center">40</td>
+                       <td class="text-right">$2,000.00</td>
+                    </tr>
+                    <tr>
+                       <td>
+                          <span class="text-inverse">3</span><br>
+           
+                       </td>
+                       <td class="text-center">item3</td>
+                       <td class="text-center">50</td>
+                       <td class="text-right">$2,500.00</td>
+                    </tr>
+                 </tbody>
+              </table>
+           </div>
+           <!-- end table-responsive -->
+           <!-- begin invoice-price -->
+           <div class="invoice-price">
+              <div class="invoice-price-left">
+                 <div class="invoice-price-row">
+                   
+                   
+                   
+                 </div>
+              </div>
+              <div class="invoice-price-right">
+                 <small>TOTAL</small> <span class="f-w-600">$4508.00</span>
+              </div>
+           </div>
+           <!-- end invoice-price -->
+        </div>
+        <!-- end invoice-content -->
+        <!-- begin invoice-note -->
+       
+        <!-- end invoice-note -->
+        <!-- begin invoice-footer -->
+       
+        <!-- end invoice-footer -->
+     </div>
+        </div>
+       
+    </div> 
+    
+    <div class="d-flex flex-row justify-content-center  " style="transform: translateY();">
+        <div class="p-2 "> 
+            <div class="pagination-responsive">
+                <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+            </div>
+            
+           
+            
+            <hr>
+            
+            <pre>Current page: {{page}}</pre></div>
+        
+    </div>
