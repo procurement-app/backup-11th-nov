@@ -1,278 +1,193 @@
-
 <div class="content-body">
 
-    <div class="d-flex flex-row justify-content-end  " style="transform: translateY();">
-        <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm">Save as Draft</button> </div>
-        <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm">Submit</button> </div>
+
+
+
+
+  <div class="d-flex flex-row justify-content-end flex-item " style="transform: translateY();">
+    <div class="p-2 "> <button type="button" class="btn btn-outline-primary" (click)="myFunction()">Save as draft</button>
+      <div id="snackbar">Saved Successfully</div>
     </div>
+    <div class="p-2 "> <button type="button" class="btn btn-primary" (click)="mynewFunction()">Submit</button>
+      <div id="snack">Submitted Successfully</div>
+    </div>
+
+  </div>
+
+
   
-
-    <div class="d-flex flex-row justify-content-start  " style="transform: translateX();">
-
-        <div class="p-2 ">
-
-
-
-            <p class="mb-0 h1 " >New Requisition</p>
-
-
-
+  <div class="d-flex flex-column flex-sm-row justify-content-around flex-item " style="transform: translateY();">
+    <div class="p-2 "> 
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">PR details</h4>
+        </div>
+        <div class="card-body">
+            <div class="basic-form">
+                <form>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>No</label>
+                            <input type="text" class="form-control" placeholder="No">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Title</label>
+                            <input type="text" class="form-control" placeholder="Title">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Email for query</label>
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Email for response</label>
+                          <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Description</label>
+                        <input type="email" class="form-control" placeholder="Description">
+                    </div>
+                       
+                       
+                    </div>
+                   
+                 
+                
+                </form>
+            </div>
         </div>
     </div>
-  
-    <div class="d-flex flex-column flex-md-row   justify-content-around  "  >
-        <div class="p-2 ">
-            <mat-accordion class="example-headers-align">
-
-
+    </div>
+    <div class="p-2 "> 
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Line items</h4>
+        </div>
+        <div class="card-body">
+            <div class="basic-form">
+                <form>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>No</label>
+                            <input type="number" class="form-control" placeholder="No">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label> Name</label>
+                            <input type="text" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Qty</label>
+                            <input type="number" class="form-control" placeholder="Qty">
+                        </div>
+                       
+                        <div class="form-group col-md-6">
+                            <label>Cost</label>
+                            <input type="number" class="form-control" placeholder="Cost">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Total</label>
+                          <input type="number" class="form-control" placeholder="Total">
+                      </div>
+                    </div>
+                   
                  
-          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-            <mat-expansion-panel-header>
-              <mat-panel-title class=" h5">
-                PR Details
-              </mat-panel-title>
-              <mat-panel-description>
                 
-                <mat-icon></mat-icon>
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div class="row h6">
-                <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label  >No</mat-label>
-                      <input matInput>
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>Title</mat-label>
-                      <input matInput type="text" min="1">
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Description</mat-label>
-                    <input matInput type="text" min="1">
-                  </mat-form-field>
-              </div>
-              <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Email for query</mat-label>
-                    <input matInput type="email" min="1" >
-                  </mat-form-field>
-              </div>
-              <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Email for response</mat-label>
-                    <input matInput type="email" min="1">
-                  </mat-form-field>
-              </div>
-           <!--  <div class="col-sm-6">
-                  <input type="date" id="myDate" value="" class="form-control" >
-              </div>
-              <div class="col-sm-6">
-                  <input type="date" id="myDate" value="" class="form-control" >
-              </div>
-            -->
-            
+                </form>
             </div>
-            <mat-action-row>
-              <button mat-button color="primary" (click)="nextStep()">Next</button>
-            </mat-action-row>
-          </mat-expansion-panel>
-           
-
-            
-            
-    
-              <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle style="padding-bottom: 1%;">
-                <mat-expansion-panel-header>
-                  <mat-panel-title class=" h5">
-                    PR Contact
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    
-                    <mat-icon></mat-icon>
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-            
-                 <div class="row">
-                  <div class="col-sm-6">
-                      <mat-form-field>
-                        <mat-label>Name</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-                  </div>
-                  <div class="col-sm-6">
-                      <mat-form-field>
-                        <mat-label>Email</mat-label>
-                        <input matInput type="email" min="1">
-                      </mat-form-field>
-                  </div>
-                  <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>Whatsapp Number</mat-label>
-                      <input matInput type="number" min="1">
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>Contact Number</mat-label>
-                      <input matInput type="number" min="1">
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Address</mat-label>
-                    <input matInput type="number" min="1">
-                  </mat-form-field>
-              </div>
-              <div class="col-sm-6">
-                <mat-form-field>
-                  <mat-label> Number</mat-label>
-                  <input matInput type="number" min="1">
-                </mat-form-field>
-            </div>
-               
-              
-              </div>
-            
-                <mat-action-row>
-                  <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                  <button mat-button color="primary" (click)="nextStep()">Next</button>
-                </mat-action-row>
-              </mat-expansion-panel>
-    
-           
-          
-          </mat-accordion>
-        
-    
-     </div>
-     
-        <div class="p-2 "><mat-accordion class="example-headers-align">
-        
-         
-    
-          <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
-            <mat-expansion-panel-header>
-              <mat-panel-title class=" h5">
-              Line Items
-              </mat-panel-title>
-              <mat-panel-description>
-                
-                <mat-icon></mat-icon>
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            <div class="row h6">
-                <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>No</mat-label>
-                      <input matInput>
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>Name</mat-label>
-                      <input matInput type="text" min="1">
-                    </mat-form-field>
-                </div>
-                <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Qty</mat-label>
-                    <input matInput type="number" min="1">
-                  </mat-form-field>
-              </div>
-              <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Cost</mat-label>
-                    <input matInput type="number" min="1" >
-                  </mat-form-field>
-              </div>
-              <div class="col-sm-6">
-                  <mat-form-field>
-                    <mat-label>Total</mat-label>
-                    <input matInput type="number" min="1">
-                  </mat-form-field>
-              </div>
-      <!--     <div class="col-sm-6">
-                  <input type="date" id="myDate" value="" class="form-control" >
-              </div>
-              <div class="col-sm-6">
-                  <input type="date" id="myDate" value="" class="form-control" >
-              </div>
-            -->
-            
-            </div>
-            <mat-action-row>
-              <button mat-button color="primary" (click)="nextStep()">Next</button>
-            </mat-action-row>
-          </mat-expansion-panel>
-           
-    
-        
-
-            
-            
-              <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle style="padding-bottom: 2%;">
-                <mat-expansion-panel-header>
-                  <mat-panel-title class=" h5">
-                    Documents
-                  </mat-panel-title>
-                  <mat-panel-description>
-                    
-                    <mat-icon></mat-icon>
-                  </mat-panel-description>
-                </mat-expansion-panel-header>
-            
-                <div class="row">
-                  <div class="col-sm-6">
-                      <mat-form-field>
-                        <mat-label>No</mat-label>
-                        <input matInput>
-                      </mat-form-field>
-                  </div>
-                  <div class="col-sm-6">
-                      <mat-form-field>
-                        <mat-label>Remarks</mat-label>
-                        <input matInput type="text" min="1">
-                      </mat-form-field>
-                  </div>
-                  <div class="col-sm-6">
-                    <mat-form-field>
-                      <mat-label>Description</mat-label>
-                      <input matInput type="text" min="1">
-                    </mat-form-field>
-                </div>
-                
-                <div class="col-sm-6">
-                  <input type="file" id="files" name="files" multiple><br><br>
-                  <button type="button" class="btn btn-sm btn-primary">Apply</button>
-                </div>
-               
-              
-              </div>
-                <mat-datepicker #picker></mat-datepicker>
-            
-                <mat-action-row>
-                  <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                  <button mat-button color="primary" (click)="nextStep()">End</button>
-                </mat-action-row>
-              </mat-expansion-panel>
-          </mat-accordion>
+        </div>
     </div>
-  
-
-
-
-
-
-
-
-
-
-
     </div>
-  
+
+  </div>
+
+
+
+  <div class="d-flex flex-column flex-sm-row justify-content-around flex-item " style="transform: translateY();">
+    <div class="p-2 "> 
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">PR contact</h4>
+        </div>
+        <div class="card-body">
+            <div class="basic-form">
+                <form>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Name</label>
+                            <input type="text" class="form-control" placeholder="No">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Contact number</label>
+                            <input type="number" class="form-control" placeholder="Contact number">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Whatsapp number </label>
+                            <input type="number" class="form-control" placeholder="Whatsapp number">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Email </label>
+                          <input type="email" class="form-control" placeholder="Email">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Address</label>
+                        <input type="text" class="form-control" placeholder="Address">
+                    </div>
+                       
+                       
+                    </div>
+                   
+                 
+                
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="p-2 "> 
+      <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Documents</h4>
+        </div>
+        <div class="card-body">
+            <div class="basic-form">
+                <form>
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>No</label>
+                            <input type="number" class="form-control" placeholder="No">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label> Description</label>
+                            <input type="text" class="form-control" placeholder="Description">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Remarks</label>
+                            <input type="text" class="form-control" placeholder="Remarks">
+                        </div>
+                       
+                        <div class="form-group col-md-6">
+                            <label>Cost</label>
+                            <input type="number" class="form-control" placeholder="Cost">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label>Total</label>
+                          <input type="number" class="form-control" placeholder="Total">
+                      </div>
+                    </div>
+                   
+                 
+                
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+
 
 </div>

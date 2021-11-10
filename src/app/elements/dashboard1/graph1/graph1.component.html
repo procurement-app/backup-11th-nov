@@ -6,14 +6,200 @@
     
     <div class="card-header align-items-start border-0 pb-0">
         <div class="mr-auto">
-            <p class="mb-2 fs-13" style="font-family: hind madurai;" ><i class="fa fa-caret-up scale5 mr-2 text-success" aria-hidden="true"></i>15 VENDORS</p>
-       <a  style="cursor: pointer;font-family: lato;" (click) = neoFunction()><h2 class="text-black mb-0 font-w400">VENDORS</h2></a>   
+            <p class="mb-2 fs-13 graph-i"  ><i class="fa fa-caret-up scale5 mr-2 text-success" aria-hidden="true"></i>15 VENDORS</p>
+       <a  style="cursor: pointer; white-space: normal;" (click)="openLg(newcontent)" >  <h4 class="card-title">Vendors</h4></a>   
          
 
 
           
         
         </div>
+        <ng-template #newcontent let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title">All vendors</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <div id="DZ_W_Todo3" class="widget-media dz-scroll height370" [perfectScrollbar]>
+                    <ul class="timeline">
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2">
+                            <img alt="image" width="50" src="">
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 1 <small class="text-muted">29 July 2020</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile </a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-primary light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-left" placement="bottom-left" ngbDropdownMenu>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2 media-info">
+        
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 2 <small class="text-muted">29 July 2020</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile</a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-info light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                            
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2 media-success">
+                            <img alt="image" width="50" src="">
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 3 <small class="text-muted">29 July 2020</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile</a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-success light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+      
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2">
+                            <img alt="image" width="50" src="">
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 4 <small class="text-muted">29 July 2020</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile</a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-primary light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                          
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2 media-danger">
+        
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 5 <small class="text-muted">02:26 PM</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile</a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-danger light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                        
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="timeline-panel">
+                          <div class="media mr-2 media-primary">
+                            <img alt="image" width="50" src="">
+                          </div>
+                          <div class="media-body">
+                            <h5 class="mb-1">Vendor 6 <small class="text-muted">29 July 2020</small></h5>
+                            <p class="mb-1"></p>
+                            <a href="#" class="btn btn-primary btn-xxs shadow mr-1">Profile</a>
+                            <a href="#" class="btn btn-outline-danger btn-xxs">Transactions</a>
+                          </div>
+                          <div class="dropdown dropdown-no-icon" ngbDropdown display="dynamic" placement="bottom-right">
+                            <button type="button" class="btn btn-primary light sharp" data-toggle="dropdown" ngbDropdownToggle>
+                              <svg width="18px" height="18px" viewBox="0 0 24 24" version="1.1">
+                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                  <rect x="0" y="0" width="24" height="24" />
+                                  <circle fill="#000000" cx="5" cy="12" r="2" />
+                                  <circle fill="#000000" cx="12" cy="12" r="2" />
+                                  <circle fill="#000000" cx="19" cy="12" r="2" />
+                                </g>
+                              </svg>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right" ngbDropdownMenu>
+                           
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Close</button>
+            </div>
+          </ng-template>
+ 
         <svg width="42" height="42" viewBox="0 0 42 42" fill="#3693FF" xmlns="http://www.w3.org/2000/svg">
             <path d="M28.5 16.5002C28.4986 14.844 27.156 13.5018 25.5003 13.5H16.5002V19.4999H25.5003C27.156 19.4985 28.4986 18.1559 28.5 16.5002Z" fill="#3693FF"/>
             <path d="M16.5002 28.5H25.5003C27.1569 28.5 28.5 27.157 28.5 25.5003C28.5 23.8432 27.1569 22.5001 25.5003 22.5001H16.5002V28.5Z" fill="#3693FF"/>

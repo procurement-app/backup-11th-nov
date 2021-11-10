@@ -1,13 +1,19 @@
 <div class="content-body">
+  
    
-    <div class="d-flex  justify-content-start  " style="transform: translateY();">
+    <div class="d-flex flex-item  justify-content-start  " style="transform: translateY();">
      
-        <div class="input-group search-area " style="margin-right: 5%;background-color: #fff;"   >
+     <div class="input-group search-area " style="background-color: #fff;"   >
             <div class="input-group-append">
                 <button class="input-group-text"><i class="flaticon-381-search-2"></i></button>
             </div>
-            <input type="text" class="form-control" placeholder="Global Filter...">
+            <input type="text" class="form-control" placeholder="Global filter...">
         </div>
+    
+
+      
+    
+    
       
       
     
@@ -15,12 +21,15 @@
   
         
      
-        <div class=" ">  <a href="/admin/req"><button type="button" class="btn btn-primary"   >ADD</button></a> 
+        <div class=" ">  <a [routerLink]="['/admin/req']"><button type="button" class="btn btn-primary">Add</button></a> 
         </div>
     </div>
 
     
-    <div class="d-flex  flex-column flex-xl-row  justify-content-around   " >
+    <div class="d-flex  flex-column flex-xl-row  justify-content-around  flex-item {
+        width: calc(100% - 2em);
+        margin: 1em;
+      }  " >
         <div class="p-2 " >
             <div class="card">
                 <div class="table-responsive">
@@ -60,7 +69,7 @@
                                     <div class="d-flex flex-row justify-content-around align-items-center "  >
                                         <i class="flaticon-381-search-2" style = "transform: translateX();"  ></i>
                                     
-                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="ResponseEmai" style="height: 50%;"  />
+                                        <input type="text" id="form12" class="form-control formcont input-group-sm " placeholder="ResponseEmail" style="height: 50%;"  />
                                     </div>
            
                                    
@@ -161,117 +170,25 @@
 
         </div>
         <div class="p-2 ">
-         <!--
-        <div class="invoice-box" id="invoice">
-            <div class="d-flex flex-row justify-content-end align-items-center">
-                <div class="p-2">
-                    
-                </div>
-                <div class="p-2"><i class="fa fa-print"></i> </div>
-                <div class="p-2" [routerLink]="['/admin/edit-req']"><i class="fa fa-edit"></i> </div>
-                <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm"
-                        (click)="closeFn()">Close</button> </div>
-            </div>
-
-			<table cellpadding="0" cellspacing="0">
-				<tr class="top">
-					<td colspan="2">
-						<table>
-							<tr>
-								<td class="title">
-									<h3>Requisition Details</h3>
-								</td>
-
-								<td>
-									No: 1<br />
-									StartDate: 17-04-2020<br />
-									EndDate: 18-05-2020 <br/>
-                                
-								</td>
-                                
-							</tr>
-						</table>
-					</td>
-				</tr>
-
-				<tr class="information">
-					<td colspan="2">
-						<table>
-							<tr>
-								<td>
-									QueryEmail:<br />
-									russia@gmail.com<br />
-									Title:Purchase
-								</td>
-
-								<td>
-									ResponseEmail:<br />
-									india@gmail.com<br />
-									Status:on
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-            -
-
-				<tr class="heading">
-					<td>Quantity</td>
-
-					<td></td>
-				</tr>
-
-				<tr class="details">
-					<td>3</td>
-
-					<td></td>
-				</tr>
-
-				<tr class="heading">
-					<td>Cost</td>
-
-					<td></td>
-				</tr>
-
-				<tr class="item">
-					
-
-					<td>$300.00</td>
-				</tr>
-
-				<tr class="item">
-					
-
-					<td>$75.00</td>
-				</tr>
-
-				<tr class="item last">
-					
-
-					<td>$10.00</td>
-				</tr>
-
-				<tr class="total">
-					<td></td>
-
-					<td>Total: $385.00</td>
-				</tr>
-			</table>
-		</div>
-    -->
+    
     <div class="invoice card" id="invoce" >
         <div class="d-flex flex-row justify-content-end  " style="transform: translateY();">
-            <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm" (click)="closeFn()">Close</button> </div>
 
+            <div class="p-2">  <a [routerLink]="['/admin/edit-req']" class="btn btn-sm btn-white m-b-10 p-l-5" ><i class="fa fa-edit t-plus-1 text-danger fa-fw fa-lg"  ></i> Edit</a></div>
+            <div class="p-2">           <a href="javascript:;" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a></div>
+            <div class="p-2 "><button type="button" class="btn btn-primary btn-sm" (click) = "closeFn()">Close</button> </div>
+            
+           
         </div>
        
         <!-- begin invoice-company -->
-        <div class="invoice-company text-inverse f-w-600">
-           <span class="pull-right hidden-print">
-           <a href="/admin/edit-req" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-edit t-plus-1 text-danger fa-fw fa-lg"  ></i> Edit</a>
+        <div class="invoice-company text-inverse f-w-600" style="font-family: sans-serif;">
+         <!--  <span class="pull-right hidden-print">
+           <a href="/admin/edit-req" class="btn btn-sm btn-white m-b-10 p-l-5" style="margin-left:2%"><i class="fa fa-edit t-plus-1 text-danger fa-fw fa-lg"  ></i> Edit</a>
            <a href="javascript:;" onclick="window.print()" class="btn btn-sm btn-white m-b-10 p-l-5"><i class="fa fa-print t-plus-1 fa-fw fa-lg"></i> Print</a>
            </span>
            Requisition Details
+        -->
 
         </div>
         <!-- end invoice-company -->
@@ -280,21 +197,29 @@
            <div class="invoice-from">
               
               <address class="m-t-5 m-b-5">
-                 <strong class="text-inverse">NO:1</strong><br>
-                 <strong class="text-inverse">Startdate: <br> 17-04-2020</strong><br>
-                 <strong class="text-inverse">Enddate: <br> 18-05-2020</strong><br>
-                 <strong class="text-inverse">QueryEmail: <br>  Russia@gmail.com</strong><br>
-                
+                 <h4 class="text-inverse">NO:  </h4>
+                 <p>1</p>
+                 
+                 <h4 class="text-inverse">Startdate: <br> </h4>
+                 <p>17-04-2020</p>
+                 <h4 class="text-inverse">Enddate: <br> </h4>
+                 <p>18-05-2020</p>
+                 <h4 class="text-inverse">Queryemail: <br>  </h4>
+                <p>Russia@gmail.com</p>
               </address>
            </div>
            <div class="invoice-from">
               
             <address class="m-t-5 m-b-5">
-                <strong class="text-inverse">Status :  on</strong><br>
-               <strong class="text-inverse">Title: <br> Purchase</strong><br>
-               <strong class="text-inverse">Description: <br >new purchase</strong><br>
+                <h4 class="text-inverse">Status : <br>  </h4>
+                <p>on</p>
+               <h4 class="text-inverse">Title: <br> </h4>
+               <p>Purchase</p>
+               <h4 class="text-inverse">Description: <br ></h4>
+               <p>New requisition</p>
             
-               <strong class="text-inverse">ResponseEmai: <br> india@gmail.com</strong><br>
+               <h4 class="text-inverse">Responseemail: </h4>
+               <p>india@gmail.com</p>
              
             </address>
          </div>
@@ -374,10 +299,10 @@
        
     </div> 
     
-    <div class="d-flex flex-row justify-content-center  " style="transform: translateY();">
+    <div class="d-flex flex-row justify-content-center   "  style="transform: translateY();">
         <div class="p-2 "> 
-            <div class="pagination-responsive">
-                <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+            <div class="pagination-responsive " >
+                <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination "></ngb-pagination>
             </div>
             
            
@@ -385,5 +310,10 @@
             <hr>
             
             <pre>Current page: {{page}}</pre></div>
+            
+          
         
     </div>
+
+    
+

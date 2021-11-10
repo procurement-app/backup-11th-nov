@@ -4,7 +4,13 @@ modal-dialog{
 
 
 @media only screen and (max-width: 568px){
-   
+   .graph-text{
+       font-size: 12px;
+   }
+
+   .graph-i{
+       font-size: 8px;
+   }
  }
 
 

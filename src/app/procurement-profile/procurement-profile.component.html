@@ -1,101 +1,94 @@
 
 <div class="content-body" >
-    <div class="d-flex flex-row justify-content-end  "  style="transform: translateY();">
-        <div class="p-2 "> <button type="button"  class ="btn btn-primary" (click) = "toggleswitcherwindow()" > Customize</button>  </div>
+    <div class="d-flex flex-row justify-content-end flex-item  "  style="transform: translateY();">
+        <div class="p-2 "> <button type="button" class="btn btn-primary" (click) = "toggleswitcherwindow()">Customize</button>  </div>
        
       </div>
 
 <div>
 
 
-    <mat-tab-group style="width: 50%;transform: translate();">
-        <mat-tab label="User Detais"> 	<div class="card">
-            <div class="card-header">
-                <h4 class="card-title"></h4>
-            </div>
-            <div class="card-body">
-                <div class="basic-form">
-                    <form>
-                        
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label>First Name</label>
-                                <input type="text" class="form-control" placeholder="first name">
+  
+    <div class="d-flex flex-column flex-sm-row justify-content-start flex-item  " style="transform: translateY();">
+        <div class="p-2 "> 
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">User details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>First name</label>
+                                    <input type="text" class="form-control" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Last name</label>
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                               
+                                <div class="form-group col-md-6">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label>Last  Name</label>
-                                <input type="text" class="form-control" placeholder="last name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label>Email</label>
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
-                           
-                            <div class="form-group col-md-6">
-                                <label>Address</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-row">
                            
                          
-                        </div>
-                       
-                       
-                    </form>
+                        
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div></mat-tab>
-        <mat-tab label="Company Details"><div class="card-header">
-            <h4 class="card-title"></h4>
         </div>
-        <div class="card-body">
-            <div class="basic-form">
-                <form>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>Company Name</label>
-                            <input type="text" class="form-control" placeholder="name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Phone number</label>
-                            <input type="number" class="form-control" placeholder="phone number">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Email</label>
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                       
-                        <div class="form-group col-md-6">
-                            <label>Address</label>
-                            <input type="text" class="form-control">
-                        </div>
+        <div class="p-2 "> 
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Company details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+                            
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Company name</label>
+                                    <input type="text" class="form-control" placeholder="1234 Main St">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Email</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Phone number</label>
+                                    <input type="number" class="form-control" placeholder="Email">
+                                </div>
+                                
+                                <div class="form-group col-md-6">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+                            </div>
+                           
+                         
+                        
+                        </form>
                     </div>
-                    <div class="form-row">
-                       
-                     
-                    </div>
-                   
-                   
-                </form>
+                </div>
             </div>
-        </div>  </mat-tab>
+        </div>
         
-      
-      
-      </mat-tab-group>
+    </div>
     
-     
+
     
-    <!--
-      <a class="sidebar-right-trigger wave-effect wave-effect-x" href="javascript:void(0);" >
-        <span><i class="fa fa-cog fa-spin"></i></span>
-    </a>
-    -->
-    <!--
-    <button  style="position: absolute;left:80%;top: 30%;border-radius: 5%;width: 15vw;height: 8vh;font-size: 1vw;background-color: #363062;color: #fff;" class="btn " (click) = "toggleswitcherwindow()">App Customisation</button>
-    -->
+    
+   
   
     
     <div [ngClass]="{'': toggleswitcher, 'show': !toggleswitcher}"  class="sidebar-right" >

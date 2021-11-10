@@ -256,6 +256,7 @@ import { SupplierManagementComponent } from './supplier-management/supplier-mana
 import { NewrequisitionComponent } from './newrequisition/newrequisition.component';
 import { RequisitionComponent } from './requisition/requisition.component';
 import { RequisitionEditComponent } from './requisition-edit/requisition-edit.component';
+import { SwitcherComponent } from './switcher/switcher.component';
 
 @NgModule({
   declarations: [
@@ -377,7 +378,7 @@ import { RequisitionEditComponent } from './requisition-edit/requisition-edit.co
     
     
     NavHeaderComponent,
-   
+   SwitcherComponent,
    
     
    

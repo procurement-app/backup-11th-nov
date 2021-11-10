@@ -2,9 +2,11 @@
 
 import { Component, OnInit, ViewChild,ViewEncapsulation,ElementRef } from '@angular/core';
 import * as moment from "moment";
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Color, Label } from 'ng2-charts';
 
+import { Color, Label } from 'ng2-charts';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
+
+import {NgbDateStruct} from '@ng-bootstrap/ng-bootstrap';
 
 
 import {
@@ -281,6 +283,7 @@ const TRANSACTIONS: transaction[] = [
 })
 export class Index1Component implements OnInit {
    mouseTarget:string;
+   modell: NgbDateStruct;
    
   public model = [
     {
@@ -318,7 +321,8 @@ export class Index1Component implements OnInit {
  
   @ViewChild("chart",) chart: ChartComponent;
   @ViewChild("canvas",) canvas:ElementRef;
-  closeResult: string;
+    closeResult: string;
+  
   
   public chartOptions: Partial<ChartOptions>;
   public chartOpts: Partial<ChartOpts>;
@@ -330,55 +334,7 @@ export class Index1Component implements OnInit {
 
     
 
-    /*
-    this.chartOpts = {
-      series: [14, 23, 21, 17, 15, 10],
-      chart: {
-        type: "polarArea",
-        width:380,
-        events: {
-          click: function() {
-            
-            document.getElementById('exampleModal').style.display = "block"
-            
-            
-               
-             
-          }
-        }
-      },
-      labels: ["Initiated", "Stage 1 Completed", "Stage 2 Completed","Awarded","Invoiced","Closed"],
-      stroke: {
-        colors: ["#fff"]
-      },
-      
-      fill: {
-        opacity: 0.8
-      },
-      theme: {
-        palette: "palette2"
-      },
-      title: {
-        text: "RFQ Status",
-        align: 'center'
-      },
-     
-
-      responsive: [
-        {
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
-            },
-            legend: {
-              position: "bottom"
-            }
-          }
-        }
-      ]
-    };
-    */
+ 
 
 
     this.chartOp = {
@@ -549,11 +505,14 @@ export class Index1Component implements OnInit {
     
   }
 
+  
 
  
 natFunction(){
   document.getElementById("exampleModal").style.display = "block";
 }
+
+
 
 
   
@@ -594,6 +553,29 @@ natFunction(){
     document.getElementById("deznav").style.opacity = "1"
   }
 
+ 
+
+
+  openXl(content) {
+    this.modalService.open(content, { size: 'xl' });
+  }
+
+
+  openLg(longContent) {
+    this.modalService.open(longContent, { size: 'lg' });
+  }
+
+
+  myFunction(){
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+  }
+ 
+ 
+
+  
+
    
   page = 1;
   pageSize = 10;
@@ -606,6 +588,8 @@ natFunction(){
       .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
   }
 
+
+  
 
   
   

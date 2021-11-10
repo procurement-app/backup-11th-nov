@@ -1,16 +1,209 @@
-import { Component, OnInit, ViewChild,ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild,ViewEncapsulation,ElementRef } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
+
+
+interface transaction {
+    image: string;
+    trans_id?: string;
+    trans_date: string;
+    from: string;
+    user_image: string;
+    to: string;
+    coin: string;
+    coin_image: string;
+    amount: string;
+    note: string;
+    status: string;
+    status_class: string;
+  }
+  
+  
+  const TRANSACTIONS: transaction[] = [
+            {
+              image: "assets/images/svg/ic_sell.svg",
+              trans_id: "#12415346563475",
+              trans_date: '2/5/2020 06:24 AM',
+              from: "Vendor 1",
+              user_image: "",
+              to: "Team",
+              coin: "Bitcoin",
+              coin_image: "assets/images/coin/btc.svg",
+              amount: "5,553",
+              note:"",
+              status:"CANCELED",
+              status_class:"text-danger",
+            },
+            {
+              image: "assets/images/svg/ic_buy.svg",
+              trans_id: "#124153465125511",
+              trans_date: '2/5/2020 06:24 AM',
+              from: "Vendor",
+              user_image: "",
+              to: "Team",
+              coin: "Ethereum",
+              coin_image: "assets/images/coin/eth.svg",
+              amount: "12,768",
+              note:"",
+              status:"COMPLETED",
+              status_class:"text-success",
+            },
+           
+            {
+              image: "assets/images/svg/ic_buy.svg",
+              trans_id: "#124153465125511",
+              trans_date: '2/5/2020 06:24 AM',
+              from: "Vendor",
+              user_image: "",
+              to: "Procurement",
+              coin: "Ethereum",
+              coin_image: "assets/images/coin/eth.svg",
+              amount: "987",
+              note:"",
+              status:"PENDING",
+              status_class:"text-light",
+            },
+        {
+          image: "assets/images/svg/ic_buy.svg",
+          trans_id: "#124153465125511",
+          trans_date: '2/5/2020 06:24 AM',
+          from: "Vendor",
+          user_image: "",
+          to: "Procurement",
+          coin: "Ethereum",
+          coin_image: "assets/images/coin/eth.svg",
+          amount: "987",
+          note:"",
+          status:"PENDING",
+          status_class:"text-light",
+          },
+          {
+            image: "assets/images/svg/ic_buy.svg",
+            trans_id: "#124153465125511",
+            trans_date: '2/5/2020 06:24 AM',
+            from: "Vendor",
+            user_image: "",
+            to: "Procurement",
+            coin: "Ethereum",
+            coin_image: "assets/images/coin/eth.svg",
+            amount: "987",
+            note:"",
+            status:"PENDING",
+            status_class:"text-light",
+            },
+            {
+              image: "assets/images/svg/ic_buy.svg",
+              trans_id: "#124153465125511",
+              trans_date: '2/5/2020 06:24 AM',
+              from: "Vendor",
+              user_image: "",
+              to: "Procurement",
+              coin: "Ethereum",
+              coin_image: "assets/images/coin/eth.svg",
+              amount: "987",
+              note:"",
+              status:"PENDING",
+              status_class:"text-light",
+              },
+              {
+                image: "assets/images/svg/ic_buy.svg",
+                trans_id: "#124153465125511",
+                trans_date: '2/5/2020 06:24 AM',
+                from: "Vendor",
+                user_image: "",
+                to: "Procurement",
+                coin: "Ethereum",
+                coin_image: "assets/images/coin/eth.svg",
+                amount: "987",
+                note:"",
+                status:"PENDING",
+                status_class:"text-light",
+                },
+                {
+                  image: "assets/images/svg/ic_buy.svg",
+                  trans_id: "#124153465125511",
+                  trans_date: '2/5/2020 06:24 AM',
+                  from: "Vendor",
+                  user_image: "",
+                  to: "Procurement",
+                  coin: "Ethereum",
+                  coin_image: "assets/images/coin/eth.svg",
+                  amount: "987",
+                  note:"",
+                  status:"PENDING",
+                  status_class:"text-light",
+                  },
+                  {
+                    image: "assets/images/svg/ic_buy.svg",
+                    trans_id: "#124153465125511",
+                    trans_date: '2/5/2020 06:24 AM',
+                    from: "Vendor",
+                    user_image: "",
+                    to: "Procurement",
+                    coin: "Ethereum",
+                    coin_image: "assets/images/coin/eth.svg",
+                    amount: "987",
+                    note:"",
+                    status:"PENDING",
+                    status_class:"text-light",
+                    },
+                    {
+                      image: "assets/images/svg/ic_buy.svg",
+                      trans_id: "#124153465125511",
+                      trans_date: '2/5/2020 06:24 AM',
+                      from: "Vendor",
+                      user_image: "",
+                      to: "Procurement",
+                      coin: "Ethereum",
+                      coin_image: "assets/images/coin/eth.svg",
+                      amount: "987",
+                      note:"",
+                      status:"PENDING",
+                      status_class:"text-light",
+                      },
+                      {
+                        image: "assets/images/svg/ic_buy.svg",
+                        trans_id: "#124153465125511",
+                        trans_date: '2/5/2020 06:24 AM',
+                        from: "Vendor",
+                        user_image: "",
+                        to: "Procurement",
+                        coin: "Ethereum",
+                        coin_image: "assets/images/coin/eth.svg",
+                        amount: "987",
+                        note:"",
+                        status:"PENDING",
+                        status_class:"text-light",
+                        },
+                        {
+                          image: "assets/images/svg/ic_buy.svg",
+                          trans_id: "#124153465125511",
+                          trans_date: '2/5/2020 06:24 AM',
+                          from: "Vendor",
+                          user_image: "",
+                          to: "Procurement",
+                          coin: "Ethereum",
+                          coin_image: "assets/images/coin/eth.svg",
+                          amount: "987",
+                          note:"",
+                          status:"PENDING",
+                          status_class:"text-light",
+                          },
+    ];
 
 @Component({
   selector: 'app-graph4',
   templateUrl: './graph4.component.html',
-  styleUrls: ['./graph4.component.css']
+  styleUrls: ['./graph4.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class Graph4Component implements OnInit {
 
-    constructor() { }
+    constructor(private modalService: NgbModal) {
+        this.updateTransactionListing();
+     }
     
     @ViewChild('canvas4', { static: true }) canvas4: ElementRef;
 
@@ -117,5 +310,20 @@ export class Graph4Component implements OnInit {
   payFunc(){
       document.getElementById("id3").style.display = "block";
   }
+
+  openXl(content) {
+    this.modalService.open(content, { size: 'xl' });
+  }
   
+  page = 1;
+  pageSize = 10;
+  collectionSize = TRANSACTIONS.length;
+  transactions: transaction[];
+  
+  updateTransactionListing() {
+    this.transactions = TRANSACTIONS
+      .map((customer, i) => ({id: i + 1, ...customer}))
+      .slice((this.page - 1) * this.pageSize, (this.page - 1) * this.pageSize + this.pageSize);
+  }
+
 }

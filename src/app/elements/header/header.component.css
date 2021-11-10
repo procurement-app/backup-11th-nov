@@ -1,23 +1,16 @@
-@media screen and (max-width: 850px) and (min-width: 600px){
-  
-}
-
-.search-area{
-    max-width: 200px !important;
-    
-}
 
 
 
-.header-content{
-  padding-right: 10.875rem !important;
-}
+
+
 
 
 
 
 @media screen and (max-width: 600px){
+  /*
   .header-content{
     padding-right: 5.875rem !important;
   }
+  */
 }

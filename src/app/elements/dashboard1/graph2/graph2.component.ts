@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild,ElementRef } from '@angular/core';
 import { ChartDataSets, ChartOptions } from 'chart.js';
 import { Color, Label } from 'ng2-charts';
-
+import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-graph2',
   templateUrl: './graph2.component.html',
@@ -9,7 +9,7 @@ import { Color, Label } from 'ng2-charts';
 })
 export class Graph2Component implements OnInit {
 
-    constructor() { }
+    constructor(private modalService: NgbModal) { }
     
     @ViewChild('canvas2', { static: true }) canvas2: ElementRef;
 
@@ -116,6 +116,10 @@ export class Graph2Component implements OnInit {
 
   mobFunction(){
     document.getElementById('id2').style.display = "block"
+  }
+
+  openLg(nextcontent) {
+    this.modalService.open(nextcontent, { size: 'lg' });
   }
 
 }

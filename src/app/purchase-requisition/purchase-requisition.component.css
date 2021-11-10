@@ -1,4 +1,9 @@
 
+.flex-item {
+  width: calc(100% - 1em);
+  margin: 1em;
+}
+
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: black;

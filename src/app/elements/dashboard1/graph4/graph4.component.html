@@ -2,8 +2,123 @@
     <div class="card-header align-items-start border-0 pb-0">
         <div class="mr-auto">
             <p class="mb-2 fs-13"><i class="fa fa-caret-up scale5 mr-2 text-success" aria-hidden="true"></i></p>
-            <h2 style="cursor: pointer;font-family: lato;" (click) = payFunc()  class="text-black mb-0 font-w400">PAYMENTS </h2>
+            <h4 style="cursor: pointer;"    (click)="openXl(content)"  class="card-title">Payments </h4> 
+           
         </div>
+        
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title">All payments</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="content-body modell">
+            <!-- row -->
+            <div class="container-fluid">
+              <div class="d-flex align-items-center flex-wrap mb-3">
+                <div class="input-group search-area-2 mb-3 mr-auto d-inline-flex">
+                  <div class="input-group-append">
+                    <a href="javascript:void(0);" class="input-group-text"><i class="flaticon-381-search-2"></i></a>
+                  </div>
+                  <input type="text" class="form-control" placeholder="Search here">
+                </div>
+                <a href="javascript:void(0);" class="btn btn-primary btn-rounded mb-3 mr-3"><i
+                    class="las la-download scale5 mr-2"></i>Get Report</a>
+                <a href="javascript:void(0);" class="btn btn-outline-primary btn-rounded mb-3 mr-3"><i
+                    class="las la-calendar scale5 mr-2"></i>Get Report</a>
+                <mat-form-field appearance="fill" class="style-1 dashboard-select  mb-3">
+                  <mat-select value="Newest">
+                    <mat-option value="Newest">Newest</mat-option>
+                    <mat-option value="Oldest">Oldest</mat-option>
+                    <mat-option value="Latest">Latest</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <div class="row">
+                <div class="col-xl-12">
+                  <div class="table-responsive table-hover fs-14">
+                    <table class="table display mb-4 dataTablesCard dataTable short-one  card-table text-black"
+                      id="example5">
+                      <thead>
+                        <tr>
+                          <th>
+                            <div class="checkbox mr-0 align-self-center">
+                              <div class="custom-control custom-checkbox ">
+                                <input type="checkbox" class="custom-control-input" id="checkAll" required="">
+                                <label class="custom-control-label" for="checkAll"></label>
+                              </div>
+                            </div>
+                          </th>
+                          <th>Transaction ID</th>
+                          <th>Date</th>
+                          <th>From</th>
+                          <th>To</th>
+
+                          <th>Amount</th>
+                          <th>Note</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let transaction of transactions; let i= index">
+                          <td class="pr-0">
+                            <img class="ic-icon" src="{{transaction.image}}" />
+                            <!-- <span class="bg-success ic-icon"></span> -->
+                          </td>
+                          <td>{{transaction.trans_id}}</td>
+                          <td>{{transaction.trans_date}}</td>
+                          <td>{{transaction.from}}</td>
+                          <td>
+                            <div class="d-flex align-items-center">
+                              <img src="{{transaction.user_image}}" class="rounded-circle mr-2 width40 height40" alt="">
+                              <span>{{transaction.to}}</span>
+                            </div>
+                          </td>
+
+                          <td>
+                            <span class="text-black font-w600">{{transaction.amount}}</span>
+                          </td>
+                          <td>
+                            <p class="mb-0 wspace-no">{{transaction.note}}</p>
+                          </td>
+                          <td>
+                            <a href="javascript:void(0);"
+                              class="btn-link {{transaction.status_class}} float-right">{{transaction.status}}</a>
+                          </td>
+                        </tr>
+
+
+
+
+                      </tbody>
+                    </table>
+
+                    <div class="d-flex justify-content-between p-2">
+                      <ngb-pagination class="mr-3" [collectionSize]="collectionSize" [(page)]="page"
+                        [pageSize]="pageSize" (pageChange)="updateTransactionListing()">
+                      </ngb-pagination>
+
+                      <select class="custom-select" style="width: auto;font-family: 'martel';" [(ngModel)]="pageSize"
+                        (ngModelChange)="updateTransactionListing()">
+                        <option [ngValue]="5">5 items per page</option>
+                        <option [ngValue]="10">10 items per page</option>
+                        <option [ngValue]="20">20 items per page</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="modal.close('Close click')">Close</button>
+    </div>
+  </ng-template>
+  
+  
         <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21.5566 23.893C21.1991 24.0359 20.8009 24.0359 20.4434 23.893L16.6064 22.3582L21 31.1454L25.3936 22.3582L21.5566 23.893Z" fill="#AC4CBC"/>
             <path d="M21 20.8846L26.2771 18.7739L21 10.3304L15.7229 18.7739L21 20.8846Z" fill="#AC4CBC"/>

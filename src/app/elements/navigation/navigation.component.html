@@ -1,18 +1,17 @@
-<!--
-<a class="arrow-new" (mouseenter) ="mouseEnter() "  ><li><span class="arrow arrow-right  "  (click) = "alertFn()"></span></li></a>-->
 
-<div class="deznav"  >
+
+<div class="deznav" >
     
 
-    <div class="deznav-scroll" [perfectScrollbar]>
-        <ul class="metismenu" id="menu" metis-menu >
-            <li [ngClass]="{'mm-active': dashboardArray.indexOf(currentHref) > -1}"><a [routerLink]="['/admin/index']" class="{{(currentHref == '/admin/index') ? 'mm-active' : ''}}"  class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
+    <div class="deznav-scroll" [perfectScrollbar] >
+        <ul class="metismenu" id="menu" metis-menu  >
+            <li [ngClass]="{'mm-active': dashboardArray.indexOf(currentHref) > -1}"><a [routerLink]="['/admin/index']" class="{{(currentHref == '/admin/index') ? 'mm-active' : ''}}"  class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false" >
                 <i class="flaticon-381-exit"></i>
                 <span  class="nav-text">Dashboard</span>  
                    
                 </a>
             <ul aria-expanded="false"  [ngClass]="{'mm-show': dashboardArray.indexOf(currentHref) > -1}">
-              <li><a  class="{{(currentHref == '/admin/index' || currentHref == '/admin') ? 'mm-active' : ''}}" [routerLink]="['/admin/index']">Dashboard &nbsp; </a></li>
+              <li><a  class="{{(currentHref == '/admin/index' || currentHref == '/admin') ? 'mm-active' : ''}}" [routerLink]="['/admin/index']" >Dashboard &nbsp; </a></li>
  
             </ul>
             
@@ -57,11 +56,11 @@
         <li [ngClass]="{'mm-active': pluginsArray.indexOf(currentHref) > -1}">
             <a class="has-arrow ai-icon"  aria-expanded="false">
                 <i class="flaticon-381-file-1"></i>
-                <span class="nav-text">purchase-requisition</span>
+                <span class="nav-text">Purchase requisition</span>
             </a>
             <ul aria-expanded="false"  [ngClass]="{'mm-show': dashboardArray.indexOf(currentHref) > -1}">
 
-                  <li><a href="/admin/purchase-requisition" class="{{(currentHref == '/admin/portofolio') ? 'mm-active' : ''}}">purchase-requisition</a></li>
+                  <li><a [routerLink]="['/admin/purchase-requisition']" class="{{(currentHref == '/admin/portofolio') ? 'mm-active' : ''}}">Purchase requisition</a></li>
 
               </ul>
             </li>
@@ -69,7 +68,7 @@
            <li [ngClass]="{'mm-active': chartsArray.indexOf(currentHref) > -1}">
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-notepad-2"></i>
-                    <span class="nav-text">Request For Propasals</span>
+                    <span class="nav-text">Request for propasals</span>
                 </a>
              <!--   <ul aria-expanded="false" [ngClass]="{'mm-show': chartsArray.indexOf(currentHref) > -1}">
                     <li [ngClass]="{'mm-active': chartsArray.indexOf(currentHref) > 0}">
@@ -103,7 +102,7 @@
                 </ul> -->
                 <ul aria-expanded="false"  [ngClass]="{'mm-show': dashboardArray.indexOf(currentHref) > -1}">
 
-                      <li><a [routerLink]="['/admin/index-3']" class="{{(currentHref == '/admin/index-3') ? 'mm-active' : ''}}">Request For Proposals &nbsp; </a></li>
+                      <li><a [routerLink]="['/admin/index-3']" class="{{(currentHref == '/admin/index-3') ? 'mm-active' : ''}}">Request for proposals &nbsp; </a></li>
 
                   </ul>
             </li> 
@@ -111,7 +110,7 @@
             <li [ngClass]="{'mm-active': bootstrapArray.indexOf(currentHref) > -1}">
                 <a class="has-arrow ai-icon" href="javascript:void()" aria-expanded="false">
                     <i class="flaticon-381-note"></i>
-                    <span class="nav-text">Purchase Order</span>
+                    <span class="nav-text">Purchase order</span>
                 </a>
            <!--     <ul aria-expanded="false" [ngClass]="{'mm-show': bootstrapArray.indexOf(currentHref) > -1}">
                     <li><a [routerLink]="['/admin/ui-accordion']" class="{{(currentHref == '/admin/ui-accordion') ? 'mm-active' : ''}}">Accordion</a></li>
@@ -142,7 +141,7 @@
                 </ul> -->
                 <ul aria-expanded="false"  [ngClass]="{'mm-show': dashboardArray.indexOf(currentHref) > -1}">
 
-                      <li><a [routerLink]="['/admin/index-4']" class="{{(currentHref == '/admin/index-4') ? 'mm-active' : ''}}">Purchase Order</a></li>
+                      <li><a [routerLink]="['/admin/index-4']" class="{{(currentHref == '/admin/index-4') ? 'mm-active' : ''}}">Purchase order</a></li>
 
                   </ul>
             </li> 
@@ -234,11 +233,11 @@
                 <li [ngClass]="{'mm-active': pluginsArray.indexOf(currentHref) > -1}">
                     <a class="has-arrow ai-icon"  aria-expanded="false">
                         <i class="flaticon-381-database"></i>
-                        <span class="nav-text">Supplier Management</span>
+                        <span class="nav-text">Supplier management</span>
                     </a>
                     <ul aria-expanded="false"  [ngClass]="{'mm-show': dashboardArray.indexOf(currentHref) > -1}">
 
-                          <li><a href="/admin/supplier-management" class="{{(currentHref == '/admin/portofolio') ? 'mm-active' : ''}}">Supplier Management</a></li>
+                          <li><a [routerLink]="['/admin/supplier-management']" class="{{(currentHref == '/admin/portofolio') ? 'mm-active' : ''}}">Supplier management</a></li>
 
                       </ul>
                     </li>
@@ -250,7 +249,7 @@
                 </a>
                 <ul aria-expanded="false" [ngClass]="{'mm-show': formsArray.indexOf(currentHref) > -1}">
                     <li><a [routerLink]="['/admin/vendor-register']" class="{{(currentHref == '/admin/vendor-register') ? 'mm-active' : ''}}">Vendors</a></li>
-                    <li><a [routerLink]="['/admin/purchase-requisition']" class="{{(currentHref == '/admin/purchase-requisition') ? 'mm-active' : ''}}">Purchase Requisition</a></li>
+                    <li><a [routerLink]="['/admin/purchase-requisition']" class="{{(currentHref == '/admin/purchase-requisition') ? 'mm-active' : ''}}">Purchase requisition</a></li>
                    
                <!--     <li><a [routerLink]="['/admin/form-element']" class="{{(currentHref == '/admin/form-element') ? 'mm-active' : ''}}">Form Elements</a></li>
                     <li><a [routerLink]="['/admin/form-validate']" class="{{(currentHref == '/admin/form-validate') ? 'mm-active' : ''}}">Form Validate</a></li> -->

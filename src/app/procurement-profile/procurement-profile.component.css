@@ -1,0 +1,4 @@
+.flex-item {
+    width: calc(98% - 1em);
+    margin: 1em;
+  }

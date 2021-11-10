@@ -5,118 +5,7 @@ import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 
-/*
-interface Country {
-  name:string
-  RequestStartDate: string;
-  RequestEndDate: string;
-  Title: string;
-  Description: string;
-  EmailforQuery:string;
-  EmailforResponse:string;
- Status:string;
 
-}
-
-const COUNTRIES: Country[] = [
-  {
-    name: 'anand',
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    name: 'anand',
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    name: 'anand',
-    RequestStartDate: '12-10-2020',
-    RequestEndDate: '13-10-2020',
-    Title: 'Requisition',
-    Description: 'new procurement',
-    EmailforQuery:'anand@gmail.com',
-    EmailforResponse:'anand@gmail.com',
-   Status:'active'
-  },
-  /*
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  {
-    RequestStartDate: '12-10-2020',
-  RequestEndDate: '13-10-2020',
-  Title: 'Procurement',
-  Description: 'new procurement',
-  EmailforQuery:'anand@gmail.com',
-  EmailforResponse:'anand@gmail.com',
- Status:'active'
-  },
-  
-];
-
-function search(text: string, pipe: PipeTransform): Country[] {
-  return COUNTRIES.filter(country => {
-    const term = text.toLowerCase();
-    return country.Title.toLowerCase().includes(term)
-        || pipe.transform(country.RequestStartDate).includes(term)
-        || pipe.transform(country.RequestEndDate).includes(term)
-        
-  });
-}
-*/
 
 
 
@@ -248,6 +137,7 @@ function search(text: string, pipe: PipeTransform): Country[] {
   providers: [DecimalPipe]
 })
 export class PurchaseRequisitionComponent implements OnInit {
+  navStyle = ' color: cornflowerblue;';
   countries$: Observable<Country[]>;
   filter = new FormControl('');
   constructor(pipe: DecimalPipe) { 
