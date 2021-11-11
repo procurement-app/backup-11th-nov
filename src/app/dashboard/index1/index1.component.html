@@ -15,133 +15,87 @@
 <div class="content-body">
 
 
-  <!--
-    <div class="d-sm-flex flex-row justify-content-start align-items-center flex-item " style="transform: translateY();">
-      <div class="p-2  " >
-        <mat-form-field color="accent" appearance="fill" style="margin-right: 15px;">
-          <mat-label style="font-family: lato;">Choose Start Date</mat-label>
-          <input matInput [matDatepicker]="picker1">
-          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-          <mat-datepicker #picker1></mat-datepicker>
-        </mat-form-field>
 
-        <mat-form-field color="accent" appearance="fill" style="transform: translateX();">
-          <mat-label style="font-family: lato;">Choose End Date</mat-label>
-          <input matInput [matDatepicker]="picker2">
-          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-          <mat-datepicker #picker2 color="primary"></mat-datepicker>
-        </mat-form-field>
-        <button type="button" class="btn btn-primary align-self-start"
-          style="transform: translate(7%,-19%);" (click) ="myFunction()">Apply</button>
-          <div id="snackbar">Applied Successfully</div>
-      </div>
-      <div class="p-2 card-tabs " style="transform: translateX();">
-        <div>
-        <ul class="nav nav-tabs   " role="tablist" ngbNav #nav="ngbNav">
-          <li class="nav-item " ngbNavItem="Week">
-            <a class="nav-link"  data-toggle="tab" href="#Week" role="tab"
-              aria-selected="false" ngbNavLink>
-              Week
-            </a>
-            <ng-template ngbNavContent>
-              <app-weekly class="bar-chart"></app-weekly>
-            </ng-template>
-          </li>
-          <li class="nav-item" ngbNavItem="Month">
-            <a class="nav-link"  data-toggle="tab" href="#Month" role="tab"
-              aria-selected="false" ngbNavLink>
-              Month
-            </a>
-            <ng-template ngbNavContent>
-              <app-monthly class="bar-chart"></app-monthly>
-            </ng-template>
-          </li>
-          <li class="nav-item" ngbNavItem="Year">
-            <a class="nav-link"  data-toggle="tab" href="#Year" role="tab"
-              aria-selected="false" ngbNavLink>
-              Year
-            </a>
-            <ng-template ngbNavContent>
-              <app-yearly class="bar-chart"></app-yearly>
-            </ng-template>
-          </li>
-        </ul>
+
+<!--FIRST SECTION START-->
+
+  <div class="card flex-items">
+    <div class="card-body">
+      
+      <div class="d-lg-flex flex-row justify-content-start align-items-center  " style="transform: translateY();">
+        <div class="p- flex-grow "> 
+          <form class="form-inline">
+            <div class="form-group">
+              <div class="input-group">
+                <input class="form-control" placeholder="yyyy-mm-dd" name="dp"  ngbDatepicker #d="ngbDatepicker">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                </div>
+              </div>
+            </div>
+          </form>
+         
         </div>
-      </div>
-
-    </div>
-  
-  -->
-
-  <div class="d-flex flex-column flex-lg-row justify-content-start flex-item align-items-center" style="transform: translateY();">
-    <div class="p-2 "> <form class="form-inline">
-      <div class="form-group">
-        <div class="input-group">
-          <input class="form-control" placeholder="yyyy-mm-dd" name="dp"  ngbDatepicker #d="ngbDatepicker">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
-          </div>
-        </div>
-      </div>
-    </form>
-    
-    </div>
-    <div class="p-2 "> 
-      <form class="form-inline">
-        <div class="form-group">
-          <div class="input-group">
-            <input class="form-control" placeholder="yyyy-mm-dd" name="dp"  ngbDatepicker #c="ngbDatepicker">
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary calendar" (click)="c.toggle()" type="button"></button>
+        <div class="p-2 flex-grow">  <form class="form-inline">
+          <div class="form-group">
+            <div class="input-group">
+              <input class="form-control" placeholder="yyyy-mm-dd" name="dp"  ngbDatepicker #c="ngbDatepicker">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary calendar" (click)="c.toggle()" type="button"></button>
+              </div>
             </div>
           </div>
+        </form>
         </div>
-      </form>
-    </div>
-    <div class="p-2 "> <button type="button" class="btn btn-primary" (click)="myFunction()" >Submit</button>
-      <div id="snackbar">Submitted Successfully</div>
-    </div>
-    <div class="p-2 card-tabs">
-      <ul class="nav nav-tabs   " role="tablist" ngbNav #nav="ngbNav">
-        <li class="nav-item " ngbNavItem="Week">
-          <a class="nav-link"  data-toggle="tab" href="#Week" role="tab"
-            aria-selected="false" ngbNavLink>
-            Week
-          </a>
-          <ng-template ngbNavContent>
-            <app-weekly class="bar-chart"></app-weekly>
-          </ng-template>
-        </li>
-        <li class="nav-item" ngbNavItem="Month">
-          <a class="nav-link"  data-toggle="tab" href="#Month" role="tab"
-            aria-selected="false" ngbNavLink>
-            Month
-          </a>
-          <ng-template ngbNavContent>
-            <app-monthly class="bar-chart"></app-monthly>
-          </ng-template>
-        </li>
-        <li class="nav-item" ngbNavItem="Year">
-          <a class="nav-link"  data-toggle="tab" href="#Year" role="tab"
-            aria-selected="false" ngbNavLink>
-            Year
-          </a>
-          <ng-template ngbNavContent>
-            <app-yearly class="bar-chart"></app-yearly>
-          </ng-template>
-        </li>
-      </ul>
+        <div class="p-2 flex-shrink">
+          <button type="button" class="btn btn-primary">Apply</button>
+        </div>
+        <div class="p-2 card-tabs flex-shrink"> 
+          <ul class="nav nav-tabs   " role="tablist" ngbNav #nav="ngbNav">
+            <li class="nav-item " ngbNavItem="Week">
+              <a class="nav-link"  data-toggle="tab" href="#Week" role="tab"
+                aria-selected="false" ngbNavLink>
+                Week
+              </a>
+              <ng-template ngbNavContent>
+                <app-weekly class="bar-chart"></app-weekly>
+              </ng-template>
+            </li>
+            <li class="nav-item" ngbNavItem="Month">
+              <a class="nav-link"  data-toggle="tab" href="#Month" role="tab"
+                aria-selected="false" ngbNavLink>
+                Month
+              </a>
+              <ng-template ngbNavContent>
+                <app-monthly class="bar-chart"></app-monthly>
+              </ng-template>
+            </li>
+            <li class="nav-item" ngbNavItem="Year">
+              <a class="nav-link"  data-toggle="tab" href="#Year" role="tab"
+                aria-selected="false" ngbNavLink>
+                Year
+              </a>
+              <ng-template ngbNavContent>
+                <app-yearly class="bar-chart"></app-yearly>
+              </ng-template>
+            </li>
+          </ul>
+        </div>
+
     </div>
 
+    </div>
   </div>
 
+<!--FIRST SECTION END-->
 
 
 
 
 
+<!--Notification-Timeline-Start-->
 
-
+<!--
   <div class="d-flex flex-row justify-content-end  " style="transform: translateY();">
     <div class="p-2 ">
       <div  class="   dropdown notification_dropdown  dropdown-no-icon" ngbDropdown>
@@ -233,11 +187,16 @@
     </div>
 
   </div>
+-->
+
+<!--Notification-Timeline-End-->
 
 
 
-  <div class="d-flex  justify-content-start flex-items  flex-xl-row flex-column ">
-    <div class="p-2 ">
+<!--Second SECTION START-->
+
+  <div class="d-flex  justify-content-start flex-item  flex-xl-row flex-column ">
+    <div class="p-1 " style="margin-right: 1em;">
       <div class="card ">
         <div class="card-header border-0 pb-0 d-flex flex-row justify-content-center">
           <h4 class="card-title">Requisition status</h4>
@@ -250,7 +209,7 @@
 
 
 
-                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels"
+                <apx-chart class="apex" [series]="chartOptions.series" [chart]="chartOptions.chart" [labels]="chartOptions.labels"
                   [dataLabels]="chartOptions.dataLabels" [title]="chartOptions.title" [fill]="chartOptions.fill"
                   [plotOptions]="chartOptions.plotOptions" [stroke]="chartOptions.stroke" [theme]="chartOptions.theme"
                   [responsive]="chartOptions.responsive" [tooltip]="chartOptions.tooltip" [legend]="chartOptions.legend"
@@ -263,7 +222,7 @@
         </div>
       </div>
     </div>
-    <div class="p-2 " (click)="openXl(content)">
+    <div class="p-1 " (click)="openXl(content)" style="margin-right: 1em;">
       <div class="card  " >
         <div class="card-header border-0 pb-0 d-flex flex-row justify-content-center ">
           <h4 class="card-title">RFQ status</h4>
@@ -275,12 +234,12 @@
               <div id="pieChart">
 
 
-                <kendo-chart>
+                <kendo-chart class="">
                   <kendo-chart-area background="transparent" [margin]="30"> </kendo-chart-area>
                   <kendo-chart-title class="kend" text="" font="20px  lato  " color="#000" fontweight="100">
                   </kendo-chart-title>
-                  <kendo-chart-series>
-                    <kendo-chart-series-item type="funnel" height="" width="" [data]="model" field="count"
+                  <kendo-chart-series class="kendos">
+                    <kendo-chart-series-item  type="funnel" height="" width="" [data]="model" field="count"
                       categoryField="stat" colorField="color">
                       <kendo-chart-series-item-labels background="none" color="white" format="N0">
                       </kendo-chart-series-item-labels>
@@ -303,7 +262,7 @@
         </div>
       </div>
     </div>
-    <div class="p-2 ">
+    <div class="p-1 " style="margin-right: 1em;">
       <div class="card ">
 
         <div class="card-header border-0 pb-0 d-flex flex-row justify-content-center">
@@ -332,9 +291,47 @@
   </div>
 
 
+<!--Second SECTION END-->
 
 
 
+  <!--THIRD SECTION START-->
+
+  
+
+  <div class="flex-itemed " >
+
+
+    <div class=" ">
+      <div class="row">
+        <div class="col-xl-3 col-sm-6 col-12" >
+          <app-graph1></app-graph1>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <app-graph2></app-graph2>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <app-graph3></app-graph3>
+        </div>
+        <div class="col-xl-3 col-sm-6 col-12">
+          <app-graph4></app-graph4>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+
+
+
+  <!--THIRD SECTION END-->
 
 
 
@@ -1000,44 +997,6 @@
 
 
 
-
-  <!--THIRD SECTION START-->
-
-  
-
-  <div class=" " style="position: relative;transform: translateX(-1%);">
-
-
-    <div class="container-fluid graph-apex">
-      <div class="row">
-        <div class="col-xl-3 col-sm-6 col-12">
-          <app-graph1></app-graph1>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-          <app-graph2></app-graph2>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-          <app-graph3></app-graph3>
-        </div>
-        <div class="col-xl-3 col-sm-6 col-12">
-          <app-graph4></app-graph4>
-
-        </div>
-
-
-
-      </div>
-    </div>
-  </div>
-
-
-
-  
-
-
-
-
-  <!--THIRD SECTION END-->
 
   <!--**********************************
     Content body end

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-
+import { Location } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-switcher',
@@ -9,13 +10,13 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SwitcherComponent implements OnInit {
 
-
+    public currentHref: string = "";
   themename: string;
   themedir: string;
   
   
   
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,location: Location, router: Router) { }
 
   ngOnInit(): void {
       

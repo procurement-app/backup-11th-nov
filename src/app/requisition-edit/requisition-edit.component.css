@@ -1,7 +1,16 @@
-.flex-item {
-  width: calc(100% - 2em);
-  margin: 1em;
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
 }
+
+.flex-item {
+  width: calc(100% - 8em);
+  margin-left: 4em;
+ 
+  
+}
+
 
 #snackbar {
     visibility: hidden;

@@ -628,10 +628,15 @@
     <div class="header-content">
         <nav class="navbar navbar-expand">
             <div class="collapse navbar-collapse justify-content-between">
-                <div class="header-left">
-                    <div class="dashboard_bar">
+                <div class="header-left" style="width: 250px;">
+                    <div [ngClass]="{'is-active': hamburgerClass, '': !hamburgerClass}" class="hamburger" (click)="toggleHamburgerClass()" style="transform: translateX(-5%);">
+                        <span class="line"></span><span class="line"></span><span class="line"></span>
+                    </div>
+                    <div class="dashboard_bar" style="transform: translateX(5%);">
                         Procurement
                     </div>
+
+                 
                 </div>
 
                 <ul class="navbar-nav header-right">
@@ -691,10 +696,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <div [ngClass]="{'is-active': hamburgerClass, '': !hamburgerClass}" class="hamburger"
-                            (click)="toggleHamburgerClass()">
-                            <span class="line"></span><span class="line"></span><span class="line"></span>
-                        </div>
+                      
                     </li>
 
 

@@ -24,6 +24,7 @@ export class NavigationComponent implements OnInit {
 
 
   ngOnInit(): void {
+    this.themeSettings('data-sibebarbg','color_3')
   }
   
   toggleIcon: boolean = true;
@@ -31,8 +32,13 @@ export class NavigationComponent implements OnInit {
     toggleLoveIcon() {
         this.toggleIcon = !this.toggleIcon;
     }
-
-    
+    themeSettings(attributeName, attributeVal) {
+      document.body.setAttribute('data-sibebarbg','color_3');
+      
+ 
+      
+  
+  }
 
     
 

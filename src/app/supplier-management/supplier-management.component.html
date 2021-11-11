@@ -1,4 +1,4 @@
-
+<!--
 <div class="content-body">
 
   
@@ -6,7 +6,7 @@
 
     <div class="d-flex flex-row justify-content-end flex-item " style="transform: translateY();">
      
-      <div class="p-2 "> <button type="button" class="btn btn-primary" (click)="mynewFunction()">Submit</button>
+      <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm" (click)="mynewFunction()">Submit</button>
         <div id="snack">Submitted Successfully</div>
       </div>
   
@@ -292,12 +292,263 @@
 </div>
 
     
+-->
+
+
+
+
+<div class="content-body">
 
 
 
 
 
-     
+    <div class="d-flex flex-row justify-content-end flex-item " style="transform: translateY();">
+      
+        <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm"
+                (click)="mynewFunction()">Submit</button>
+            <div id="snack">Submitted Successfully</div>
+        </div>
+
+    </div>
+
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-start flex-item  " style="transform: translateY();">
+        <div class=" ">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Basic details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>Supplier id</label>
+                                    <input type="number" class="form-control" placeholder="Supplier id">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Trn no</label>
+                                    <input type="number" class="form-control" placeholder="Trn no">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>VAT</label>
+                                    <input type="number" class="form-control" placeholder="VAT">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Country</label>
+                                    <input type="text" class="form-control" placeholder="Country">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Category</label>
+                                    <input type="text" class="form-control" placeholder="Category">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    </div>
+
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-around flex-item  " style="transform: translateY();">
+        <div class="pr-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Contact details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" placeholder="Phone">
+                                </div>
+                               
+                                <div class="form-group col-md-6">
+                                    <label>Email </label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Delivery address</label>
+                                    <input type="text" class="form-control" placeholder="Delivery Address">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Local address</label>
+                                    <input type="text" class="form-control" placeholder="Local address">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Other details </label>
+                                    <input type="text" class="form-control" placeholder="Other details">
+                                </div>
+
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" pl-1 ">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">References</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Department</label>
+                                    <input type="text" class="form-control" placeholder="Department">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Designation</label>
+                                    <input type="text" class="form-control" placeholder="Designation">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Email</label>
+                                    <input type="mail" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Phone</label>
+                                    <input type="number" class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-around flex-item  " style="transform: translateY();">
+        <div class="pr-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Documents</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>No</label>
+                                    <input type="number" class="form-control" placeholder="No">
+                                </div>
+                               
+                                <div class="form-group col-md-6">
+                                    <label>Document type </label>
+                                    <input type="text" class="form-control" placeholder="Document type">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Issuedate</label>
+                                    <input type="number" class="form-control" placeholder="Issuedate">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Expirydate</label>
+                                    <input type="number" class="form-control" placeholder="Expirydate">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Remarks </label>
+                                    <input type="text" class="form-control" placeholder="Remarks">
+                                </div>
+
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=" pl-1 ">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Terms and conditions</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>No</label>
+                                    <input type="number" class="form-control" placeholder="No">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Payment term</label>
+                                    <input type="text" class="form-control" placeholder="Payment term">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Credit limit</label>
+                                    <input type="text" class="form-control" placeholder="Credit limit">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Max cash discount</label>
+                                    <input type="number" class="form-control" placeholder="Max cash discount">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" placeholder="Remarks">
+                                </div>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+
+
+
+</div>
   
   
    

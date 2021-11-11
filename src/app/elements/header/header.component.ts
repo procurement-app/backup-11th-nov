@@ -9,6 +9,7 @@ import { HostListener } from "@angular/core";
 })
 export class HeaderComponent implements OnInit {
 	hamburgerClass: boolean =false;
+
 	navClass: boolean = true;
 	toggleChat: boolean = true;
 	toggleSingle: boolean = true;
@@ -35,6 +36,7 @@ export class HeaderComponent implements OnInit {
 	  toggleSidebarClass() {
 		 this.navClass = !this.navClass  ;
 	  }
+
 	
 
 }

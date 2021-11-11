@@ -4,189 +4,163 @@
 
 
 
-  <div class="d-flex flex-row justify-content-end flex-item " style="transform: translateY();">
-    <div class="p-2 "> <button type="button" class="btn btn-outline-primary" (click)="myFunction()">Save as draft</button>
-      <div id="snackbar">Saved Successfully</div>
-    </div>
-    <div class="p-2 "> <button type="button" class="btn btn-primary" (click)="mynewFunction()">Submit</button>
-      <div id="snack">Submitted Successfully</div>
-    </div>
-
-  </div>
-
-
-  
-  <div class="d-flex flex-column flex-sm-row justify-content-around flex-item " style="transform: translateY();">
-    <div class="p-2 "> 
-      <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">PR details</h4>
+    <div class="d-flex flex-row justify-content-end flex-item " style="transform: translateY();">
+        <div class="p-2 "> <button type="button" class="btn btn-outline-primary btn-sm" (click)="myFunction()">Save as
+                draft</button>
+            <div id="snackbar">Saved Successfully</div>
         </div>
-        <div class="card-body">
-            <div class="basic-form">
-                <form>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>No</label>
-                            <input type="text" class="form-control" placeholder="No">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Title</label>
-                            <input type="text" class="form-control" placeholder="Title">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Email for query</label>
-                            <input type="email" class="form-control" placeholder="Email">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label>Email for response</label>
-                          <input type="email" class="form-control" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label>Description</label>
-                        <input type="email" class="form-control" placeholder="Description">
+        <div class="p-2 "> <button type="button" class="btn btn-primary btn-sm"
+                (click)="mynewFunction()">Submit</button>
+            <div id="snack">Submitted Successfully</div>
+        </div>
+
+    </div>
+
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-start flex-item  " style="transform: translateY();">
+        <div class=" ">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">PR details</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label>No</label>
+                                    <input type="text" class="form-control" placeholder="No">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Title</label>
+                                    <input type="text" class="form-control" placeholder="Title">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Email for query</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Email for response</label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Description</label>
+                                    <input type="text" class="form-control" placeholder="text">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Contact number</label>
+                                    <input type="number" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label>Remarks</label>
+                                    <input type="text" class="form-control" placeholder="Email">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </form>
                     </div>
-                       
-                       
-                    </div>
-                   
-                 
-                
-                </form>
+                </div>
             </div>
         </div>
+        
+
     </div>
-    </div>
-    <div class="p-2 "> 
-      <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Line items</h4>
-        </div>
-        <div class="card-body">
-            <div class="basic-form">
-                <form>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>No</label>
-                            <input type="number" class="form-control" placeholder="No">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label> Name</label>
-                            <input type="text" class="form-control" placeholder="Name">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Qty</label>
-                            <input type="number" class="form-control" placeholder="Qty">
-                        </div>
-                       
-                        <div class="form-group col-md-6">
-                            <label>Cost</label>
-                            <input type="number" class="form-control" placeholder="Cost">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label>Total</label>
-                          <input type="number" class="form-control" placeholder="Total">
-                      </div>
+
+
+
+    <div class="d-flex flex-column flex-sm-row justify-content-around flex-item  " style="transform: translateY();">
+        <div class="pr-1">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">PR contact</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>Name</label>
+                                    <input type="text" class="form-control" placeholder="No">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Contact number</label>
+                                    <input type="number" class="form-control" placeholder="Contact number">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Whatsapp number </label>
+                                    <input type="number" class="form-control" placeholder="Whatsapp number">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Email </label>
+                                    <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Address</label>
+                                    <input type="text" class="form-control" placeholder="Address">
+                                </div>
+
+
+                            </div>
+
+
+
+                        </form>
                     </div>
-                   
-                 
-                
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
+        <div class=" pl-1 ">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Line Items</h4>
+                </div>
+                <div class="card-body">
+                    <div class="basic-form">
+                        <form>
 
-  </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label>No</label>
+                                    <input type="number" class="form-control" placeholder="No">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label> Name</label>
+                                    <input type="text" class="form-control" placeholder="Name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Qty</label>
+                                    <input type="text" class="form-control" placeholder="Qty">
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label>Cost</label>
+                                    <input type="number" class="form-control" placeholder="Cost">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label>Total</label>
+                                    <input type="number" class="form-control" placeholder="Total">
+                                </div>
+                            </div>
 
 
 
-  <div class="d-flex flex-column flex-sm-row justify-content-around flex-item " style="transform: translateY();">
-    <div class="p-2 "> 
-      <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">PR contact</h4>
-        </div>
-        <div class="card-body">
-            <div class="basic-form">
-                <form>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>Name</label>
-                            <input type="text" class="form-control" placeholder="No">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Contact number</label>
-                            <input type="number" class="form-control" placeholder="Contact number">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Whatsapp number </label>
-                            <input type="number" class="form-control" placeholder="Whatsapp number">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label>Email </label>
-                          <input type="email" class="form-control" placeholder="Email">
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label>Address</label>
-                        <input type="text" class="form-control" placeholder="Address">
+                        </form>
                     </div>
-                       
-                       
-                    </div>
-                   
-                 
-                
-                </form>
+                </div>
             </div>
         </div>
-    </div>
-    </div>
-    <div class="p-2 "> 
-      <div class="card">
-        <div class="card-header">
-            <h4 class="card-title">Documents</h4>
-        </div>
-        <div class="card-body">
-            <div class="basic-form">
-                <form>
-                    
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label>No</label>
-                            <input type="number" class="form-control" placeholder="No">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label> Description</label>
-                            <input type="text" class="form-control" placeholder="Description">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label>Remarks</label>
-                            <input type="text" class="form-control" placeholder="Remarks">
-                        </div>
-                       
-                        <div class="form-group col-md-6">
-                            <label>Cost</label>
-                            <input type="number" class="form-control" placeholder="Cost">
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label>Total</label>
-                          <input type="number" class="form-control" placeholder="Total">
-                      </div>
-                    </div>
-                   
-                 
-                
-                </form>
-            </div>
-        </div>
-    </div>
+
     </div>
 
-  </div>
+
+    
 
 
 

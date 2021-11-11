@@ -10,7 +10,7 @@ import { HostListener } from "@angular/core";
 })
 export class NavHeaderComponent implements OnInit {
 
-
+    
   hamburgerClass: boolean =false;
   
   screenHeight: number;
@@ -23,12 +23,26 @@ export class NavHeaderComponent implements OnInit {
   ngOnInit(): void {
     document.body.setAttribute('data-sidebar-style', 'full');
     	this.hamburgerClass = this.sharedService.toggleHamburgerClass();
+
+        this.themeSettings('data-nav-headerbg','color_3')
+    
     
   } 
+  
+
   
   toggleHamburgerClass(){
 	this.hamburgerClass = this.sharedService.toggleHamburgerClass();
   }
+
+  themeSettings(attributeName, attributeVal) {
+    document.body.setAttribute('data-nav-headerbg','color_3');
+    
+
+    
+
+}
+  
   /*
    @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
@@ -45,6 +59,9 @@ export class NavHeaderComponent implements OnInit {
     }
     */
 
+
+
+
     @HostListener('window:resize', ['$event'])
     getScreenSize(event?) {
         this.screenHeight = window.innerHeight;
@@ -57,6 +74,8 @@ export class NavHeaderComponent implements OnInit {
         }
     }
 
+
+ 
 }
 
 

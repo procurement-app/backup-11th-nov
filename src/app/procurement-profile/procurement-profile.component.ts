@@ -81,9 +81,9 @@ export class ProcurementProfileComponent implements OnInit {
     themeSettings(attributeName, attributeVal) {
         document.body.setAttribute(attributeName, attributeVal);
         
-        sessionStorage.setItem("data-theme", "dark");
-        sessionStorage.setItem("data-new", "light");
-        sessionStorage.setItem("colour","black")
+    //    sessionStorage.setItem("data-theme", "dark");
+     //   sessionStorage.setItem("data-new", "light");
+      //  sessionStorage.setItem("colour","black")
        
         // var e = document.getElementById("theme_direction");
         // var direction= e.options[e.selectedIndex].value;
@@ -94,6 +94,16 @@ export class ProcurementProfileComponent implements OnInit {
             document.getElementsByTagName('html')[0].setAttribute('dir', attributeVal);
             document.getElementsByTagName('html')[0].setAttribute('class', attributeVal);
         }
+    }
+
+
+    themeSet() {
+      
+       alert("hello")
+        
+   
+        
+       
     }
     
     

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ElementRef,Input, Directive } from '@angular/core';
 
 
 
@@ -24,18 +24,25 @@ const COUNTRIES: Country[] = [
 ];
 
 
+
+
 @Component({
   selector: 'app-newrequisition',
   templateUrl: './newrequisition.component.html',
-  styleUrls: ['./newrequisition.component.css']
+  styleUrls: ['./newrequisition.component.css'],
+
 })
 
+
+
+
 export class NewrequisitionComponent implements OnInit {
- 
+  
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   countries = COUNTRIES;

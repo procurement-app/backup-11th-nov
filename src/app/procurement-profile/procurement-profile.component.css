@@ -1,4 +1,32 @@
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: black;
+  opacity: 1; /* Firefox */
+}
+
 .flex-item {
-    width: calc(98% - 1em);
-    margin: 1em;
+  width: calc(100% - 8em);
+  margin-left: 4em;
+ 
+  
+}
+
+
+  #btn-1{
+    display: inline-block;
+    width: 35px;
+
+
+    height: 35px;
+
+
+    cursor: pointer;
+    transition: all .1s ease;
+    border-radius: 4px;
+
+
+    margin-right: 5px;
+
+
+    margin-bottom: 3px
+
   }

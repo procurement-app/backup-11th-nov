@@ -41,7 +41,7 @@ const COUNTRIES: Country[] = [
   },
   
   {
-    email: 'United States@gmailcom',
+    email: 'United @gmail.com',
     mail: 'usa@gmail.com',
     start: '23-7-2019',
     end: '24-8-2019',
@@ -50,7 +50,7 @@ const COUNTRIES: Country[] = [
   status:'Active'
   },
   {
-    email: 'United States@gmailcom',
+    email: 'United @gmail.com',
     mail: 'usa@gmail.com',
     start: '23-7-2019',
     end: '24-8-2019',
@@ -59,7 +59,7 @@ const COUNTRIES: Country[] = [
   status:'Active'
   },
   {
-    email: 'United States@gmailcom',
+    email: 'United @gmail.com',
     mail: 'usa@gmail.com',
     start: '23-7-2019',
     end: '24-8-2019',
